@@ -8,12 +8,12 @@ public class UI_Manager : MonoBehaviour
 {
     [SerializeField] GameObject[] setupPages;
     public string selectedCompany = "";
-    public int amountOfQuestions = 0;
+    public int amountOfQuestions = 3;
     public string chosenInterviewer = "";
     
     [SerializeField] Slider slider;
 
-    private Management gameManager;
+    public Management gameManager;
 
     [SerializeField] private GameObject setupCanvas;
     [SerializeField] private GameObject resetCanvas;
@@ -41,12 +41,6 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject defaultMan;
     [SerializeField] private GameObject santa;
     
-    
-    
-    void Start()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<Management>();
-    }
     
     public void GoToPage(int index)
     {
