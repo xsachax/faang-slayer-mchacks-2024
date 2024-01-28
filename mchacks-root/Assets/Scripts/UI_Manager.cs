@@ -37,6 +37,9 @@ public class UI_Manager : MonoBehaviour
     public Color selectedColor;
     public Color unselectedColor;
     [SerializeField] private GameObject[] resultButtons;
+
+    [SerializeField] private GameObject defaultMan;
+    [SerializeField] private GameObject santa;
     
     
     
@@ -85,6 +88,16 @@ public class UI_Manager : MonoBehaviour
         recordCanvas.SetActive(true);
         quitCanvas.SetActive(false);
         GoToPage(0);
+        if (chosenInterviewer == "Santa")
+        {
+            defaultMan.SetActive(false);
+            santa.SetActive(true);
+        }
+        else
+        {
+            defaultMan.SetActive(true);
+            santa.SetActive(false);
+        }
         gameManager.StartInterview(selectedCompany, amountOfQuestions, chosenInterviewer);
         
     }
