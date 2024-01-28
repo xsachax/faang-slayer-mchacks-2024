@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class UI_Manager : MonoBehaviour
 {
-    [SerializeField] GameObject[] pages;
+    [SerializeField] GameObject[] setupPages;
     private string selectedCompany = "";
     private int amountOfQuestions = 0;
     private string chosenInterviewer = "";
@@ -20,6 +20,24 @@ public class UI_Manager : MonoBehaviour
     
     [SerializeField] private GameObject quitCanvas;
     
+    [SerializeField] private GameObject recordCanvas;
+    
+    [SerializeField] private GameObject resultsCanvas;
+    
+    private List<string> resultTitles = new List<string>();
+    private List<int> resultScores = new List<int>();
+    private List<string> resultDescriptions = new List<string>();
+    
+    private GameObject[] resultTitlesText;
+    private GameObject[] resultScoresText;
+    
+    private Slider resultSlider;
+    private GameObject[] resultDescriptionsText;
+    
+    public Color selectedColor;
+    public Color unselectedColor;
+    [SerializeField] private GameObject[] resultButtons;
+    
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<Management>();
@@ -27,15 +45,15 @@ public class UI_Manager : MonoBehaviour
     
     public void GoToPage(int index)
     {
-        for(int i = 0; i < pages.Length; i++)
+        for(int i = 0; i < setupPages.Length; i++)
         {
             if(i == index)
             {
-                pages[i].SetActive(true);
+                setupPages[i].SetActive(true);
             }
             else
             {
-                pages[i].SetActive(false);
+                setupPages[i].SetActive(false);
             }
         }
     }
@@ -64,6 +82,7 @@ public class UI_Manager : MonoBehaviour
         gameManager.StartInterview(selectedCompany, amountOfQuestions, chosenInterviewer);
         setupCanvas.SetActive(false);
         resetCanvas.SetActive(true);
+        recordCanvas.SetActive(true);
         quitCanvas.SetActive(false);
         GoToPage(0);
     }
@@ -73,6 +92,26 @@ public class UI_Manager : MonoBehaviour
         setupCanvas.SetActive(true);
         resetCanvas.SetActive(false);
         quitCanvas.SetActive(true);
+        recordCanvas.SetActive(false);
  
+    }
+
+    public void GoToResultsTab(int index)
+    {
+        for(int i = 0; i < resultButtons.Length; i++)
+        {
+            if(i == index)
+            {
+                resultButtons[i].gameObject.GetComponent<Image>().color = selectedColor;
+                resultTitlesText[i].GetComponent<Text>().text = resultTitles[i];
+                resultScoresText[i].GetComponent<Text>().text = resultScores[i].ToString();
+                resultSlider.value = resultScores[i];
+                resultDescriptionsText[i].GetComponent<Text>().text = resultDescriptions[i];
+            }
+            else
+            {
+                resultButtons[i].gameObject.GetComponent<Image>().color = unselectedColor;
+            }
+        }
     }
 }
