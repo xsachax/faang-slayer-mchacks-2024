@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a8dd95c-1a57-446e-a0fa-ece08c703a29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/AudioRecord.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/AudioRecord.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/SavWav.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/SavWav.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../AutoHand/Scripts/Attributes/NaughtyAttributes/Editor/NaughtyInspector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SaveWav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Whisper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Scripts/AudioStuff/AudioRecord.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Scripts/AudioStuff/SavWav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Library/PackageCache/com.srcnalt.openai-unity@f7f501c076/Runtime/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Library/PackageCache/com.srcnalt.openai-unity@f7f501c076/Runtime/OpenAIApi.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
