@@ -11,8 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/f3f39f0a-d805-4af3-9ebb-50e71c3fa35c_2317063-b7d3513ae09e075c79826395f138f93777eac222.zip.35c/2317063-b7d3513ae09e075c79826395f138f93777eac222/SavWav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/AudioRecord.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/Interview.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/Management.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/SavWav.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/UI_Manager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -54,7 +57,7 @@
       <workItem from="1705645489250" duration="10000" />
       <workItem from="1705849938755" duration="2778000" />
       <workItem from="1706389557667" duration="122000" />
-      <workItem from="1706389797977" duration="10668000" />
+      <workItem from="1706389797977" duration="14110000" />
     </task>
     <servers />
   </component>
