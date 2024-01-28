@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/Interview.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/Management.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../mchacks-root/Assets/Scripts/UI_Manager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -53,7 +54,7 @@
       <workItem from="1705645489250" duration="10000" />
       <workItem from="1705849938755" duration="2778000" />
       <workItem from="1706389557667" duration="122000" />
-      <workItem from="1706389797977" duration="7620000" />
+      <workItem from="1706389797977" duration="10668000" />
     </task>
     <servers />
   </component>
