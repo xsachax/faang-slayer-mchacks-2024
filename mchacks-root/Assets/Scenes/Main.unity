@@ -1506,6 +1506,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.6716, y: -0.000000052154064}
   m_SizeDelta: {x: -1.4207, y: -0.0902}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!54 &245669741 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 297602102319057233, guid: 4854c80cf48d01e44bfe786e8cf18e3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714025201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &245669742 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 297602102319057246, guid: 4854c80cf48d01e44bfe786e8cf18e3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714025201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &256143545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c309330f1f77340bbe9c2c74812d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setupPages: []
+  setupPages:
+  - {fileID: 1832470805}
+  - {fileID: 1832619690}
+  - {fileID: 800100980}
+  - {fileID: 380121395}
+  - {fileID: 632289683}
   selectedCompany: 
   amountOfQuestions: 0
   chosenInterviewer: 
@@ -4232,7 +4249,7 @@ Transform:
   m_GameObject: {fileID: 631711104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.416, y: 0.798, z: 2.635}
+  m_LocalPosition: {x: -0.169, y: 0.012, z: 2.396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7938,10 +7955,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chairPosition: {fileID: 631711104}
   player: {fileID: 952287250}
-  audioRecorder: {fileID: 0}
+  rb: {fileID: 245669741}
+  capsuleCollider: {fileID: 245669742}
+  floorCollider: {fileID: 1619500181}
+  audioRecorder: {fileID: 1343342341}
   uiManager: {fileID: 356864372}
-  questionText: {fileID: 0}
-  npcSpeechSource: {fileID: 0}
+  questionText: {fileID: 1712133437}
+  npcSpeechSource: {fileID: 1710507578}
 --- !u!1 &1153390518
 GameObject:
   m_ObjectHideFlags: 0
@@ -11782,6 +11802,11 @@ PrefabInstance:
     - target: {fileID: 297602102319057233, guid: 4854c80cf48d01e44bfe786e8cf18e3a,
         type: 3}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 297602102319057246, guid: 4854c80cf48d01e44bfe786e8cf18e3a,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 297602103752395642, guid: 4854c80cf48d01e44bfe786e8cf18e3a,

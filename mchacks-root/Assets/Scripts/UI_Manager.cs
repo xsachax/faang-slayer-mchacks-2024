@@ -80,13 +80,13 @@ public class UI_Manager : MonoBehaviour
         Debug.Log("Company: " + selectedCompany);
         Debug.Log("Amount of Questions: " + amountOfQuestions);
         Debug.Log("Interviewer: " + chosenInterviewer);
-        
-        gameManager.StartInterview(selectedCompany, amountOfQuestions, chosenInterviewer);
         setupCanvas.SetActive(false);
         resetCanvas.SetActive(true);
         recordCanvas.SetActive(true);
         quitCanvas.SetActive(false);
         GoToPage(0);
+        gameManager.StartInterview(selectedCompany, amountOfQuestions, chosenInterviewer);
+        
     }
     
     public void ResetUI()
