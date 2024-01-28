@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 public class UI_Manager : MonoBehaviour
 {
     [SerializeField] GameObject[] setupPages;
-    private string selectedCompany = "";
-    private int amountOfQuestions = 0;
-    private string chosenInterviewer = "";
+    public string selectedCompany = "";
+    public int amountOfQuestions = 0;
+    public string chosenInterviewer = "";
     
     [SerializeField] Slider slider;
 
@@ -37,6 +37,8 @@ public class UI_Manager : MonoBehaviour
     public Color selectedColor;
     public Color unselectedColor;
     [SerializeField] private GameObject[] resultButtons;
+    
+    
     
     void Start()
     {
@@ -73,7 +75,7 @@ public class UI_Manager : MonoBehaviour
         chosenInterviewer = interviewer;
     }
     
-    public void ConfirmSelections()
+    public async void ConfirmSelections()
     {
         Debug.Log("Company: " + selectedCompany);
         Debug.Log("Amount of Questions: " + amountOfQuestions);
