@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8dd95c-1a57-446e-a0fa-ece08c703a29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../Scripts/AudioRecord.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Scripts/AudioRecord.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Scripts/SavWav.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Scripts/SavWav.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Whisper.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Whisper.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/AudioStuff/AudioRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Scripts/AudioStuff/AudioRecord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/Interview.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/Interview.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/Management.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Scripts/Management.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Scripts/UI_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Scripts/UI_Manager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,8 @@
     <setting file="file://$PROJECT_DIR$/Whisper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Scripts/AudioStuff/AudioRecord.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Scripts/AudioStuff/SavWav.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Scripts/Management.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Scripts/UI_Manager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Library/PackageCache/com.srcnalt.openai-unity@f7f501c076/Runtime/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Library/PackageCache/com.srcnalt.openai-unity@f7f501c076/Runtime/OpenAIApi.cs" root0="SKIP_HIGHLIGHTING" />
   </component>

@@ -1,32 +1,1 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-
-public class Management : MonoBehaviour
-{
-    [SerializeField] public GameObject chairPosition;
-    [SerializeField] public GameObject player;
-
-    [SerializeField] public UI_Manager uiManager;
-    
-    
-    public void StartInterview(string company, int amountOfQuestions, string interviewer)
-    {
-        Debug.Log("Begin Interview");
-    }
-
-    public void FinishInterview()
-    {
-        uiManager.ResetUI();
-        player.transform.position = new Vector3(0,0,0);
-
-        
-    }
-    
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-}
+using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.UI;using UnityEngine.EventSystems;using TMPro;using System.IO;using System;using OpenAI;using System.Threading.Tasks;//dddusing System.Collections.IDictionary;public class Management : MonoBehaviour{    [SerializeField] public GameObject chairPosition;    [SerializeField] public GameObject player;        [SerializeField] public Rigidbody rb;    [SerializeField] public Collider capsuleCollider;        [SerializeField] public Collider floorCollider;    [SerializeField] public AudioRecord audioRecorder;    [SerializeField] public UI_Manager uiManager;            [SerializeField] public TextMeshProUGUI questionText;    [SerializeField] public AudioSource npcSpeechSource;            private string company;    private int amountOfQuestions;    private string interviewer;        bool questionSubmitted = false;         public List<object> questions;        private IEnumerator WaitForSubmitCoroutine()    {        yield return new WaitUntil(() => questionSubmitted == false);    }    public IEnumerator InterviewCoroutine()    {        var data = questions;        for (int i = 0; i < amountOfQuestions; i++)        {            //make new coroutine for the interview            // Assuming data[i] is a dictionary-like structure            Dictionary<string, object> questionData = (Dictionary<string, object>)data[i];            string txt = questionData["question_text"].ToString();            questionText.text = txt;            //string base64Audio = data[i]["mp3_b64"];            //byte[] audioData = Convert.FromBase64String(base64Audio);            //AudioClip audioClip = WavUtility.ToAudioClip(audioData, 0, audioData.Length, 0, 0);            // convert base64 to audio clip            // TODO            //npcSpeechSource.clip = audioClip;            //npcSpeechSource.Play();            //wait for question to finish            StartCoroutine(WaitForSubmitCoroutine());            //submit answer            string sttOutput = audioRecorder.output;            //send answer to backend on new thread and wait for response            // store returned score & review locally            //  TODO        }        return null;    }        public List<object> FetchQuestions(string company, int amountOfQuestions)    {        // send http request to backend to get base-64 and questions in json        // TODO        return new List<dynamic>()        {            new {                question_text = ".....",                mp3_b64 = "....base64 encoded audio....."            },            new {                question_text = ".....",                mp3_b64 = "....base64 encoded audio....."            }        };    }        public void StartInterview(string company, int amountOfQuestions, string interviewer)    {        floorCollider.enabled = false;        rb.isKinematic = true;        rb.useGravity = false;        capsuleCollider.enabled = false;        rb.constraints = RigidbodyConstraints.FreezeAll;        rb.useGravity = false;        player.transform.position = chairPosition.transform.position;        player.transform.rotation = chairPosition.transform.rotation;                this.company = company;        this.amountOfQuestions = amountOfQuestions;        this.interviewer = interviewer;                // send request to backend to get questions and base-64 audio file        questions = FetchQuestions(company, amountOfQuestions);        StartCoroutine(InterviewCoroutine());    }    public void OnAnswerSubmitted()    {        questionSubmitted = true;    }                           public void FinishInterview()    {        uiManager.ResetUI();        player.transform.position = new Vector3(0,0,0);        rb.isKinematic = false;        capsuleCollider.enabled = true;        rb.constraints = RigidbodyConstraints.None;        rb.useGravity = true;        floorCollider.enabled = true;            }        public void QuitGame()    {        Application.Quit();    }}

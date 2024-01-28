@@ -7,10 +7,12 @@ public class AudioRecord : MonoBehaviour
 {
     AudioClip myAudioClip;
 
-    private string output;
+    public string output;
     private int i = 0;
     
-    private OpenAIApi openai = new OpenAIApi("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");
+    private int questionNumber = 0;
+    
+    private OpenAIApi openai = new OpenAIApi();
 
     public void StartRecording()
     {
@@ -42,11 +44,9 @@ public class AudioRecord : MonoBehaviour
         audio.clip = myAudioClip;
         audio.Play();
     }
-
-    public void SubmitAudio()
+    
+    public string GetOutput()
     {
-        //submit
+        return output;
     }
-    
-    
 }
